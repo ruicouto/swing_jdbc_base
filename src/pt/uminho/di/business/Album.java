@@ -12,8 +12,6 @@ import java.util.List;
  * @author ruicouto
  */
 public class Album {
-    /** Id of the Album */
-    private int id;
     /** Name of the album */
     private String name;
     /** Artist */
@@ -22,7 +20,6 @@ public class Album {
     private List<Track> tracks;
 
     public Album(String name, String artist) {
-        this.id = -1;
         this.name = name;
         this.artist = artist;
         this.tracks = new ArrayList<>();
@@ -39,10 +36,6 @@ public class Album {
     public String getArtist() {
         return artist;
     }
-
-    public int getId() {
-        return id;
-    }
         
     public void setName(String name) {
         this.name = name;
@@ -56,8 +49,5 @@ public class Album {
         this.artist = artist;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
     
 }
