@@ -4,32 +4,24 @@
  */
 package pt.uminho.di;
 
-import pt.uminho.di.business.Album;
-import pt.uminho.di.business.Track;
+import pt.uminho.di.business.Facade;
+import pt.uminho.di.presentation.MainView;
 
 /**
- *
+ * The class which starts the application
  * @author ruicouto
  */
 public class Main {
 
     /**
+     * Creates the Facade instance, the main view and starts it.
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        Album a = new Album("Hardwired... to Self-Destruct","Metallica");
-        Track t1 = new Track("Hardwired", 3.09);
-        a.getTracks().add(t1);
-        Track t2 = new Track("Atlas, Rise!", 6.29);
-        a.getTracks().add(t2);
-        
-        Album b = new Album("Drones","Muse");
-        Track t3 = new Track("Dead inside", 4.23);
-        b.getTracks().add(t3);
-        Track t4 = new Track("[Drill Sergeant]", 0.21);
-        b.getTracks().add(t4);
-        
-        
+    public static void main(String[] args) {        
+        Facade f = new Facade(); //Facade could be a Singleton
+        MainView mv = new MainView(f);
+        mv.setLocationRelativeTo(null);
+        mv.setVisible(true);
     }
     
 }

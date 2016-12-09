@@ -9,13 +9,13 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
- *
+ * This class
  * @author ruicouto
  */
 public class Connect {
     
-    private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String USERNAME = "your_mysql_username";
+    private static final String PASSWORD = "your_mysql_password";
     private static final String URL = "localhost";
     private static final String SCHEMA = "albums";
     
